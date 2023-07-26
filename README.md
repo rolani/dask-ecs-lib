@@ -1,7 +1,8 @@
 # dask_ecs_lib
 Create a dask cluster to run a provided function
 
- Package      scheduler      
+### Packages in Image ###
+ Package      version      
 
  blosc  -->      1.10.6          
  cloudpickle  -->  2.2.1       
@@ -15,7 +16,7 @@ Create a dask cluster to run a provided function
  toolz  -->        0.12.0
  tornado -->      6.2
 
-You will want the client (the environment you are launching the ECS cluster from) to have the above libraries and versions matched. Check client_requirements.txt.
+You will want the client (the environment you are launching the ECS cluster from) to have the above libraries and versions matched. Check client_requirements_py38.txt.
 
 ### How do I get set up? ###
 

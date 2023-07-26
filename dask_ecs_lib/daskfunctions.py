@@ -7,8 +7,7 @@ from dask_ecs_lib.logger import set_log_config
 from dask.distributed import Client, LocalCluster
 from dask_cloudprovider.aws import FargateCluster
 
-task_role = os.environ('TASK_ROLE')
-execution_role = os.environ('EXECUTION_ROLE')
+
 # security group that allows all traffic between tasks and access to ports 8786 and 8787 from anywhere
 sg_group = os.environ('SECURITY_GROUP') 
 
@@ -85,9 +84,7 @@ def createFargateContext(func, num_workers, dask_image, worker_vcpu, worker_memo
                     scheduler_extra_args=scheduler_args,
                     security_groups = sg_group,
                     environment=env,
-                    tags=tags_,
-                    task_role_arn=task_role,
-                    execution_role_arn=execution_role
+                    tags=tags_
                 ) as cluster:
 
             logger.info("cluster created")
