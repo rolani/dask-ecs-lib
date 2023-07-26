@@ -11,10 +11,11 @@ Create a dask cluster to run a provided function
  lz4  -->          4.3.2          
  msgpack  -->     1.0.4          
  numpy  -->        1.24.2      
- pandas  -->       1.5.3          
- python  -->       3.8.0.final.0 
+ pandas  -->       1.5.3   
  toolz  -->        0.12.0
- tornado -->      6.2
+ tornado -->      6.2       
+ python  -->       3.8.0.final.0 
+
 
 You will want the client (the environment you are launching the ECS cluster from) to have the above libraries and versions matched. Check client_requirements_py38.txt.
 
