@@ -1,0 +1,23 @@
+# general
+h5py<3.0.0
+pytest
+asyncmock
+scikit-learn==0.24.2
+requests
+deprecation
+aiohttp
+typing_extensions
+click==8.0.4 
+pyyaml
+aioresponses
+sqlalchemy==1.4.25
+pymysql
+pytest
+boto3==1.21.29
+urllib3==1.25.10
+numpy==1.19.5
+alembic
+blosc==1.10.6
+tensorflow-determinism
+pyarrow
+s3fs

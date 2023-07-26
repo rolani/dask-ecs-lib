@@ -1,0 +1,38 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "filters": {
+      "clip_error_or_above": {
+        "()": "dask_ecs_lib.logger.RemoveLevelFilter",
+        "level_to_skip": "ERROR"
+      }
+    },
+    "formatters": {
+      "simple": {
+        "format": "%(asctime)s %(levelname)-8s %(name)s - %(message)s"
+      },
+      "error_format": {
+        "format": "%(asctime)s %(levelname)-8s [%(filename)s:%(module)s:%(funcName)s:%(lineno)d] %(message)s"
+      }
+    },
+    "handlers": {
+      "stdout": {
+        "level": "DEBUG",
+        "class": "logging.StreamHandler",
+        "formatter": "simple",
+        "stream": "ext://sys.stdout",
+        "filters": ["clip_error_or_above"]
+      },
+      "stderr": {
+        "level": "ERROR",
+        "class": "logging.StreamHandler",
+        "formatter": "error_format",
+        "stream": "ext://sys.stderr"
+      }
+    },
+    "loggers": {},
+    "root": {
+      "handlers": ["stdout", "stderr"],
+      "level": "DEBUG"
+    }
+  }
