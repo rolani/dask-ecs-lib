@@ -24,9 +24,9 @@ You will want the client (the environment you are launching the ECS cluster from
 * Importing:
 
     ```
-    import svclusterlib`
+    import dask_ecs_lib`
 
-    from svclusterlib import daskfunctions
+    from dask_ecs_lib import daskfunctions
     ```
 
 * Usage:
