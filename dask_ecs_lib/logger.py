@@ -1,9 +1,9 @@
 import json
-import logging.config
 import logging
+import logging.config
 from pathlib import Path
 
-LOG_CONFIG = Path(__file__).parent / 'log.json'
+LOG_CONFIG = Path(__file__).parent / "log.json"
 TIMESTAMP_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 
@@ -16,10 +16,10 @@ class RemoveLevelFilter:
 
 
 def set_log_config():
-    logging.getLogger('boto3').setLevel(logging.CRITICAL)
-    logging.getLogger('botocore').setLevel(logging.CRITICAL)
-    logging.getLogger('aiobotocore').setLevel(logging.CRITICAL)
-    logging.getLogger('urllib3').setLevel(logging.CRITICAL)
-    with LOG_CONFIG.open('rb') as stream:
+    logging.getLogger("boto3").setLevel(logging.CRITICAL)
+    logging.getLogger("botocore").setLevel(logging.CRITICAL)
+    logging.getLogger("aiobotocore").setLevel(logging.CRITICAL)
+    logging.getLogger("urllib3").setLevel(logging.CRITICAL)
+    with LOG_CONFIG.open("rb") as stream:
         config = json.load(stream)
     logging.config.dictConfig(config)

@@ -1,5 +1,6 @@
 # utility functions
 
+
 def parse_url(s):
     """
     Converts returned cluster details to url to visit for dask dashboard
@@ -10,6 +11,7 @@ def parse_url(s):
     s2_ = s1_[2].split(":")
     url_ = "http://" + s2_[0] + ":8787"
     return url_
+
 
 def estimate_cost(estimate_per_hr, elapsed_time):
     """
